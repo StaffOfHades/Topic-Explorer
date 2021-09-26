@@ -1,29 +1,33 @@
-import React, { useState, useEffect } from "react"
-import Result from "./result"
-import { search } from "./api"
-import "./styles.css"
+import React, { useState, useEffect } from 'react';
+import Result from './result';
+import { search } from './api';
+import styles from './styles.module.scss';
 
 const App = () => {
-  const [results, setResults] = useState([])
-  const [topic, setTopic] = useState("react")
+  const [results, setResults] = useState([]);
+  const [topic, setTopic] = useState('react');
 
   useEffect(() => {
-    search(topic)
-      .then((data) => {
-        setResults(data)
-      })
-  }, [topic])
+    search(topic).then((data) => {
+      setResults(data);
+    });
+  }, [topic]);
   return (
-    <div className="App">
+    <div className={styles.App}>
       <h1>{topic}</h1>
       <hr />
-      <ul className="topicsList">
+      <ul className={styles.topicsList}>
         {results.map((r) => (
-          <Result key={r.id} item={r} setTopic={setTopic} />
+          <Result
+            className={styles.relatedTopic}
+            key={r.id}
+            item={r}
+            setTopic={setTopic}
+          />
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
