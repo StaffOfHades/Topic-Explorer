@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Result = ({ className, item, setTopic }) => {
+export const Result = ({ className, item, setTopic }) => {
   const handler = () => {
     setTopic(item.name);
   };
@@ -15,5 +15,3 @@ const Result = ({ className, item, setTopic }) => {
     </li>
   );
 };
-
-export default Result;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Result from './result';
+import { Result } from './Result';
 import { search } from './api';
-import styles from './styles.module.scss';
+import styles from './ResultList.module.scss';
 
-const App = () => {
+export const ResultList = () => {
   const [results, setResults] = useState([]);
   const [topic, setTopic] = useState('react');
 
@@ -12,6 +12,7 @@ const App = () => {
       setResults(data);
     });
   }, [topic]);
+
   return (
     <div className={styles.App}>
       <h1>{topic}</h1>
@@ -29,5 +30,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
