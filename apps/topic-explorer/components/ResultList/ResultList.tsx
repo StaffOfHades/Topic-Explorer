@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
+
 import { Result } from './Result';
+import { Item } from './types';
 import { search } from './api';
 import styles from './ResultList.module.scss';
 
 export const ResultList = () => {
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<Item[]>([]);
   const [topic, setTopic] = useState('react');
 
   useEffect(() => {
-    search(topic).then((data) => {
+    search({ topic }).then((data) => {
       setResults(data);
     });
   }, [topic]);

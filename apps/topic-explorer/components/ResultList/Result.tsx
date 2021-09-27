@@ -1,6 +1,8 @@
 import React from 'react';
 
-export const Result = ({ className, item, setTopic }) => {
+import { ResultProps } from './types';
+
+export const Result = ({ className, item, setTopic }: ResultProps) => {
   const handler = () => {
     setTopic(item.name);
   };

@@ -1,6 +1,8 @@
 const SEARCH_PATH = 'https://api.github.com/graphql';
 
-export const search = (topic) => {
+import { SearchOptions } from './types';
+
+export const search = ({ topic }: SearchOptions) => {
   return fetch(`${SEARCH_PATH}`, {
     method: 'POST',
     headers: {
