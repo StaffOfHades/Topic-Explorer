@@ -20,6 +20,7 @@ export const Topic = ({
     'py-1',
     'border-2',
     'border-gray-300',
+    'shadow',
     'rounded-lg',
     'active:bg-gray-400',
     'hover:border-gray-500',

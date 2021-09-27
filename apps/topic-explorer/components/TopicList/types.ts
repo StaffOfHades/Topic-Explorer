@@ -1,14 +1,14 @@
-export type {
-  Topic_topic_relatedTopics as Topic,
-  Topic as TopicData,
-  TopicVariables,
-} from './graphql/Topic';
-import { Topic_topic_relatedTopics as Topic } from './graphql/Topic';
+import { Topic_topic_relatedTopics as Topic } from '../../graphql/Topic';
 
-export type TopicListProps = {};
+export interface TopicListProps {
+  loading: boolean;
+  topic: string;
+  topics: Omit<Topic, '__typename'>[];
+  setTopic(topic: string): void;
+}
 
 export interface TopicProps {
   className?: string;
-  topic: Topic;
+  topic: Omit<Topic, '__typename'>;
   setTopic(topic: string): void;
 }
