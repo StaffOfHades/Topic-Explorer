@@ -1,8 +1,8 @@
 import styles from './index.module.scss';
-import { ResultList } from '../components/ResultList';
+import { TopicList } from '../components/TopicList';
 
 export function Index() {
-  return <ResultList />;
+  return <TopicList />;
 }
 
 export default Index;

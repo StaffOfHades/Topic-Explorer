@@ -5,8 +5,8 @@ export type {
 } from './graphql/Topic';
 import { Topic_topic_relatedTopics as Topic } from './graphql/Topic';
 
-export interface ResultProps {
+export interface TopicProps {
   className?: string;
-  item: Topic;
+  topic: Topic;
   setTopic(topic: string): void;
 }
