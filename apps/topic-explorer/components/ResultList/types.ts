@@ -1,18 +1,9 @@
-export interface Topic {
-  id: number;
-  name: string;
-  stargazerCount: number;
-}
-
-export interface TopicData {
-  topic: {
-    relatedTopics: Topic[];
-  };
-}
-
-export interface TopicVars {
-  name: string;
-}
+export type {
+  Topic_topic_relatedTopics as Topic,
+  Topic as TopicData,
+  TopicVariables,
+} from './graphql/Topic';
+import { Topic_topic_relatedTopics as Topic } from './graphql/Topic';
 
 export interface ResultProps {
   className?: string;

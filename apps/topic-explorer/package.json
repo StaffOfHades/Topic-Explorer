@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "graphql-codegen": "apollo client:codegen --target=typescript graphql"
+  }
+}

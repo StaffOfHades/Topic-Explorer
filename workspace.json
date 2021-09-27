@@ -6,6 +6,12 @@
       "sourceRoot": "apps/topic-explorer",
       "projectType": "application",
       "targets": {
+        "graphql-codegen": {
+          "executor": "@nrwl/workspace:run-script",
+          "options": {
+            "script": "graphql-codegen"
+          }
+        },
         "build": {
           "executor": "@nrwl/next:build",
           "outputs": ["{options.outputPath}"],

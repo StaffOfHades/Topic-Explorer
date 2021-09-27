@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useQuery, gql } from '@apollo/client';
 
 import { Result } from './Result';
-import { TopicData, TopicVars } from './types';
+import { TopicData, TopicVariables } from './types';
 import styles from './ResultList.module.scss';
 
 const SEARCH_TOPICS = gql`
@@ -19,7 +19,7 @@ const SEARCH_TOPICS = gql`
 
 export const ResultList = () => {
   const [topic, setTopic] = useState('react');
-  const { data } = useQuery<TopicData, TopicVars>(SEARCH_TOPICS, {
+  const { data } = useQuery<TopicData, TopicVariables>(SEARCH_TOPICS, {
     variables: { name: topic },
   });
 
@@ -27,7 +27,7 @@ export const ResultList = () => {
     <div className={styles.App}>
       <h1>{topic}</h1>
       <hr />
-      {data && (
+      {data && data.topic && (
         <ul className={styles.topicsList}>
           {data.topic.relatedTopics.map((topic) => (
             <Result
