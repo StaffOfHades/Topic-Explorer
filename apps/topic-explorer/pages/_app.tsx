@@ -31,7 +31,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>GitHub Topic Explorer</title>
       </Head>
-      <div className="app">
+      <div className="font-sans subpixel-antialiased text-base text-gray-900 bg-gray-50 min-h-screen font-semibold">
         <Component {...pageProps} />
       </div>
     </ApolloProvider>

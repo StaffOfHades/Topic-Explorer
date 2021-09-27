@@ -5,6 +5,8 @@ export type {
 } from './graphql/Topic';
 import { Topic_topic_relatedTopics as Topic } from './graphql/Topic';
 
+export type TopicListProps = {};
+
 export interface TopicProps {
   className?: string;
   topic: Topic;
