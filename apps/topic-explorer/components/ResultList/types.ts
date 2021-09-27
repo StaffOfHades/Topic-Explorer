@@ -1,15 +1,21 @@
-export interface Item {
+export interface Topic {
   id: number;
   name: string;
   stargazerCount: number;
 }
 
-export interface SearchOptions {
-  topic: string;
+export interface TopicData {
+  topic: {
+    relatedTopics: Topic[];
+  };
+}
+
+export interface TopicVars {
+  name: string;
 }
 
 export interface ResultProps {
   className?: string;
-  item: Item;
+  item: Topic;
   setTopic(topic: string): void;
 }
