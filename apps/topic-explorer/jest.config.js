@@ -7,4 +7,5 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/topic-explorer',
+  setupFilesAfterEnv: ['./jest-setup.ts'],
 };
