@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { Topic as topicData } from '@allianceit/fixtures';
 
 import { TopicList } from '../TopicList';
-import topicData from '../../../fixtures/Topic.json';
 
 describe('<TopicList />', () => {
   const {

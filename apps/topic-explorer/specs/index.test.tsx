@@ -2,10 +2,10 @@ import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
 import { act, create } from 'react-test-renderer';
 import { render, screen, waitFor } from '@testing-library/react';
+import { Topic as topicData } from '@allianceit/fixtures';
 
 import { Index, FIND_TOPIC_QUERY } from '../pages/index';
 import { TopicVariables } from '../graphql/Topic';
-import topicData from '../fixtures/Topic.json';
 
 describe('/', () => {
   const findTopicVariable: TopicVariables = { name: 'topicName' };

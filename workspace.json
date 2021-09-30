@@ -1,6 +1,20 @@
 {
   "version": 2,
   "projects": {
+    "fixtures": {
+      "root": "libs/fixtures",
+      "sourceRoot": "libs/fixtures/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/fixtures/**/*.ts"]
+          }
+        }
+      }
+    },
     "topic-explorer": {
       "root": "apps/topic-explorer",
       "sourceRoot": "apps/topic-explorer",

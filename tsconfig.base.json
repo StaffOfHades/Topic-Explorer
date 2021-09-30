@@ -15,8 +15,11 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@allianceit/fixtures": ["libs/fixtures/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
