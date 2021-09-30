@@ -1,13 +1,41 @@
-import { getGreeting } from '../support/app.po';
+interface TopicData {
+  data: {
+    topic: {
+      relatedTopics: Array<{ name: string; stargazerCount: number }>;
+    };
+  };
+}
 
 describe('topic-explorer', () => {
-  beforeEach(() => cy.visit('/'));
+  describe('/', () => {
+    it('should get data from server and load into view', () => {
+      cy.intercept('POST', 'https://api.github.com/graphql', {
+        fixture: 'Topic.json',
+      }).as('findTopic');
+      cy.visit('/');
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+      cy.get('.text-3xl').should('contain', 'react');
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to topic-explorer!');
+      cy.wait('@findTopic');
+
+      cy.fixture('Topic.json').as('topicData');
+      cy.get('@topicData').then((topicData: unknown) => {
+        const {
+          data: {
+            topic: { relatedTopics },
+          },
+        } = topicData as TopicData;
+        relatedTopics.forEach(({ name, stargazerCount }, index) => {
+          cy.get(`:nth-child(${index + 1}) > .flex > .text-left`).should(
+            'contain',
+            name
+          );
+          cy.get(`:nth-child(${index + 1}) > .flex > .text-right`).should(
+            'contain',
+            stargazerCount
+          );
+        });
+      });
+    });
   });
 });
