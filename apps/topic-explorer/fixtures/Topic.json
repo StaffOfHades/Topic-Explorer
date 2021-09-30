@@ -1,0 +1,57 @@
+{
+  "data": {
+    "topic": {
+      "relatedTopics": [
+        {
+          "id": "MDU6VG9waWNhbmd1bGFy",
+          "name": "angular",
+          "stargazerCount": 35411,
+          "__typename": "Topic"
+        },
+        {
+          "id": "MDU6VG9waWNyZWFjdC1uYXRpdmU=",
+          "name": "react-native",
+          "stargazerCount": 20032,
+          "__typename": "Topic"
+        },
+        {
+          "id": "MDU6VG9waWN2dWU=",
+          "name": "vue",
+          "stargazerCount": 41685,
+          "__typename": "Topic"
+        },
+        {
+          "id": "MDU6VG9waWNvcGVuY3Y=",
+          "name": "opencv",
+          "stargazerCount": 921,
+          "__typename": "Topic"
+        },
+        {
+          "id": "MDU6VG9waWNjb21wdXRlci12aXNpb24=",
+          "name": "computer-vision",
+          "stargazerCount": 1564,
+          "__typename": "Topic"
+        },
+        {
+          "id": "MDU6VG9waWNvYmplY3QtZGV0ZWN0aW9u",
+          "name": "object-detection",
+          "stargazerCount": 150,
+          "__typename": "Topic"
+        },
+        {
+          "id": "MDU6VG9waWNkZWVwLWxlYXJuaW5n",
+          "name": "deep-learning",
+          "stargazerCount": 41886,
+          "__typename": "Topic"
+        },
+        {
+          "id": "MDU6VG9waWN0ZW5zb3JmbG93",
+          "name": "tensorflow",
+          "stargazerCount": 24431,
+          "__typename": "Topic"
+        }
+      ],
+      "__typename": "Topic"
+    }
+  }
+}

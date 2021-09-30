@@ -3,14 +3,18 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { Topic } from '../Topic';
+import topicData from '../../../../../fixtures/Topic.json';
 
 describe('<Topic />', () => {
-  const props = {
-    topic: {
-      id: '1',
-      name: 'topicName',
-      stargazerCount: 10,
+  const {
+    data: {
+      topic: {
+        relatedTopics: [topic],
+      },
     },
+  } = topicData;
+  const props = {
+    topic,
     setTopic: jest.fn(),
   };
 

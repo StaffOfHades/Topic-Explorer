@@ -4,37 +4,17 @@ import { act, create } from 'react-test-renderer';
 import { render, screen, waitFor } from '@testing-library/react';
 
 import { Index, FIND_TOPIC_QUERY } from '../pages/index';
-import { Topic as TopicData, TopicVariables } from '../graphql/Topic';
+import { TopicVariables } from '../graphql/Topic';
+import topicData from '../fixtures/Topic.json';
 
 describe('/', () => {
-  const topicData: TopicData = {
-    topic: {
-      __typename: 'Topic',
-      relatedTopics: [
-        {
-          __typename: 'Topic',
-          id: '1',
-          name: 'topicName1',
-          stargazerCount: 10,
-        },
-        {
-          __typename: 'Topic',
-          id: '2',
-          name: 'topicName2',
-          stargazerCount: 20,
-        },
-      ],
-    },
-  };
   const findTopicVariable: TopicVariables = { name: 'topicName' };
   const findTopicMock = {
     request: {
       query: FIND_TOPIC_QUERY,
       variables: findTopicVariable,
     },
-    result: {
-      data: topicData,
-    },
+    result: topicData,
   };
 
   it('renders index page unchanged', async () => {
@@ -47,7 +27,7 @@ describe('/', () => {
       async () =>
         await waitFor(() =>
           expect(component.root.findAllByType('button')).toHaveLength(
-            topicData.topic!.relatedTopics.length
+            topicData.data.topic.relatedTopics.length
           )
         )
     );

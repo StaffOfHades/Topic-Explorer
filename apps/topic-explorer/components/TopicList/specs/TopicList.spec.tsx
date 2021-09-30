@@ -2,23 +2,18 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { TopicList } from '../TopicList';
+import topicData from '../../../fixtures/Topic.json';
 
 describe('<TopicList />', () => {
+  const {
+    data: {
+      topic: { relatedTopics: topics },
+    },
+  } = topicData;
   const props = {
     loading: false,
     topic: 'topicName',
-    topics: [
-      {
-        id: '1',
-        name: 'topicName1',
-        stargazerCount: 10,
-      },
-      {
-        id: '2',
-        name: 'topicName2',
-        stargazerCount: 20,
-      },
-    ],
+    topics,
     setTopic: jest.fn(),
   };
 

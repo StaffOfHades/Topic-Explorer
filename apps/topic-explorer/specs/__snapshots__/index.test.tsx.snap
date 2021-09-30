@@ -23,13 +23,13 @@ exports[`/ renders index page unchanged 1`] = `
         <span
           className="inline-block flex-auto text-left text-lg"
         >
-          topicName1
+          angular
         </span>
         <span
           className="inline-block flex-auto text-right text-yellow-600"
         >
           ★ 
-          10
+          35411
         </span>
       </button>
     </li>
@@ -43,13 +43,133 @@ exports[`/ renders index page unchanged 1`] = `
         <span
           className="inline-block flex-auto text-left text-lg"
         >
-          topicName2
+          react-native
         </span>
         <span
           className="inline-block flex-auto text-right text-yellow-600"
         >
           ★ 
-          20
+          20032
+        </span>
+      </button>
+    </li>
+    <li
+      className="topic block my-2"
+    >
+      <button
+        className="flex w-full px-4 py-1 border-2 border-gray-300 shadow rounded-lg active:bg-gray-400 hover:border-gray-500 focus:ring-2 focus:ring-blue-400"
+        onClick={[Function]}
+      >
+        <span
+          className="inline-block flex-auto text-left text-lg"
+        >
+          vue
+        </span>
+        <span
+          className="inline-block flex-auto text-right text-yellow-600"
+        >
+          ★ 
+          41685
+        </span>
+      </button>
+    </li>
+    <li
+      className="topic block my-2"
+    >
+      <button
+        className="flex w-full px-4 py-1 border-2 border-gray-300 shadow rounded-lg active:bg-gray-400 hover:border-gray-500 focus:ring-2 focus:ring-blue-400"
+        onClick={[Function]}
+      >
+        <span
+          className="inline-block flex-auto text-left text-lg"
+        >
+          opencv
+        </span>
+        <span
+          className="inline-block flex-auto text-right text-yellow-600"
+        >
+          ★ 
+          921
+        </span>
+      </button>
+    </li>
+    <li
+      className="topic block my-2"
+    >
+      <button
+        className="flex w-full px-4 py-1 border-2 border-gray-300 shadow rounded-lg active:bg-gray-400 hover:border-gray-500 focus:ring-2 focus:ring-blue-400"
+        onClick={[Function]}
+      >
+        <span
+          className="inline-block flex-auto text-left text-lg"
+        >
+          computer-vision
+        </span>
+        <span
+          className="inline-block flex-auto text-right text-yellow-600"
+        >
+          ★ 
+          1564
+        </span>
+      </button>
+    </li>
+    <li
+      className="topic block my-2"
+    >
+      <button
+        className="flex w-full px-4 py-1 border-2 border-gray-300 shadow rounded-lg active:bg-gray-400 hover:border-gray-500 focus:ring-2 focus:ring-blue-400"
+        onClick={[Function]}
+      >
+        <span
+          className="inline-block flex-auto text-left text-lg"
+        >
+          object-detection
+        </span>
+        <span
+          className="inline-block flex-auto text-right text-yellow-600"
+        >
+          ★ 
+          150
+        </span>
+      </button>
+    </li>
+    <li
+      className="topic block my-2"
+    >
+      <button
+        className="flex w-full px-4 py-1 border-2 border-gray-300 shadow rounded-lg active:bg-gray-400 hover:border-gray-500 focus:ring-2 focus:ring-blue-400"
+        onClick={[Function]}
+      >
+        <span
+          className="inline-block flex-auto text-left text-lg"
+        >
+          deep-learning
+        </span>
+        <span
+          className="inline-block flex-auto text-right text-yellow-600"
+        >
+          ★ 
+          41886
+        </span>
+      </button>
+    </li>
+    <li
+      className="topic block my-2"
+    >
+      <button
+        className="flex w-full px-4 py-1 border-2 border-gray-300 shadow rounded-lg active:bg-gray-400 hover:border-gray-500 focus:ring-2 focus:ring-blue-400"
+        onClick={[Function]}
+      >
+        <span
+          className="inline-block flex-auto text-left text-lg"
+        >
+          tensorflow
+        </span>
+        <span
+          className="inline-block flex-auto text-right text-yellow-600"
+        >
+          ★ 
+          24431
         </span>
       </button>
     </li>
