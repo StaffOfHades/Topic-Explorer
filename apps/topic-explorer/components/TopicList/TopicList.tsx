@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { Topic } from './Topic';
+import { Topic } from './components/Topic';
 import { TopicListProps } from './types';
 import styles from './TopicList.module.scss';
 

@@ -6,9 +6,3 @@ export interface TopicListProps {
   topics: Omit<Topic, '__typename'>[];
   setTopic(topic: string): void;
 }
-
-export interface TopicProps {
-  className?: string;
-  topic: Omit<Topic, '__typename'>;
-  setTopic(topic: string): void;
-}
